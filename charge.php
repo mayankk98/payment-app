@@ -15,6 +15,8 @@ $last_name = $POST['last_name'];
 $email = $POST['email'];
 $token = $POST['stripeToken'];
 
+
+
 // Create Customer In Stripe
 $customer = \Stripe\Customer::create(array(
 	"email" => $email,
@@ -45,6 +47,7 @@ $customer->addCustomer($customerData);
 
 
 
+
 // Transaction Data
 $transactionData = [
 	'id' => $charge->id,
@@ -60,6 +63,8 @@ $transaction = new Transaction();
 
 // Add Transaction To DB
 $transaction->addTransaction($transactionData);
+
+
 
 
 // Redirect To Success Page
