@@ -1,3 +1,5 @@
 config/db.php
 js/charge.js
-composer.*
+composer.json
+composer.lock
+composer.phar
